@@ -1,15 +1,13 @@
 # todomvc-thymeleaf-config
 
-logging.level.: ${LOGGING_LEVEL_:INFO}
+#logging.level.: ${LOGGING_LEVEL_:INFO}
 logging:
   file: ${LOGGING_FILE:oss-todomvc-thymeleaf}.log
-  path: ${LOGGING_PATH:${user.home}/data/oss-todomvc-thymeleaf/logs}
+  level.: ${LOGGING_LEVEL_:INFO}
   level:
     jndi: ${LOGGING_LEVEL_:INFO}
 
-server:
-  error:
-    includeStacktrace: ALWAYS   # 记录 trace
+  path: ${LOGGING_PATH:${user.home}/data/oss-todomvc-thymeleaf/logs}
 
 app:
   type: TEMPLATE
@@ -19,17 +17,22 @@ app:
     authFailureHandler: '/login.html'
     authSucessHandler: '/index.html'
     basePath: '/auth'
-    
+
 debug: false
 
+
 security:
+
   ignored: '/info,/login.html,/css/**,/js/**,/images/**,/webjars/**,/**/favicon.ico'
   user:
     name: ${SECURITY_USER_NAME:admin}
     password: ${SECURITY_USER_PASSWORD:admin_pass}
     role: ADMIN
 
-server.port: ${SERVER_PORT:8083}
+server:
+  error:
+    includeStacktrace: ALWAYS   # 记录 trace
+  port: ${SERVER_PORT:8083}
 
 spring.datasource:
   continue-on-error: false 
