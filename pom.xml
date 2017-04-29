@@ -10,7 +10,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <oss-configlint.version>1.0.6.OSS-SNAPSHOT</oss-configlint.version>
+        <oss-configlint.version>1.0.6.OSS</oss-configlint.version>
     </properties>
 
     <build>
@@ -29,7 +29,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>com.yirendai.infra</groupId>
+                                    <groupId>cn.home1</groupId>
                                     <artifactId>oss-configlint</artifactId>
                                     <version>${oss-configlint.version}</version>
                                     <type>jar</type>
