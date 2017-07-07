@@ -1,8 +1,13 @@
-stages:
-- analysis
-
-on_every_push:
+analysis:
   stage: analysis
   script:
-  - echo "on_every_push"
   - bash ci.sh analysis
+
+before_script:
+- export BUILD_SITE=false
+#- export LIB_CI_SCRIPT=https://github.com/home1-oss/oss-build/raw/master/src/main/ci-script/lib_ci.sh
+- export LIB_CI_SCRIPT=http://gitlab.local:10080/home1-oss/oss-build/raw/master/src/main/ci-script/lib_ci.sh
+- export ORIGIN_REPO_SLUG=home1-oss/oss-todomvc-thymeleaf-config
+
+stages:
+- analysis
