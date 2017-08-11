@@ -7,7 +7,7 @@ logging:
   level:
     jndi: ${LOGGING_LEVEL_:INFO}
 
-  path: ${LOGGING_PATH:${user.home}/data/oss-todomvc-thymeleaf/logs}
+  path: ${LOGGING_PATH:${user.home}/.oss/oss-todomvc-thymeleaf/logs}
 
 app:
   type: TEMPLATE
@@ -46,7 +46,7 @@ spring.datasource:
   validation-query: 'SELECT 1'
   type: 'com.zaxxer.hikari.HikariDataSource'
   driver-class-name: 'org.h2.Driver'
-  url: 'jdbc:h2:~/data/oss-todomvc-thymeleaf/h2' #'jdbc:h2:mem:mydb'
+  url: 'jdbc:h2:~/.oss/oss-todomvc-thymeleaf/h2' #'jdbc:h2:mem:mydb'
   
 ---
 spring:
