@@ -1,4 +1,4 @@
-# todomvc-thymeleaf-config
+# oss-todomvc-thymeleaf-config
 
 #logging.level.: ${LOGGING_LEVEL_:INFO}
 logging:
